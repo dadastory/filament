@@ -58,35 +58,30 @@ void FsrEasuL(
     //    E
     highp AF2 pp=(ip)*(con0.xy)+(con0.zw);
     highp AF2 tc=(pp+AF2_(0.5))*con1.xy;
-    AF3 sA=FsrEasuSampleF(tc-AF2(0, con1.y));
-    AF3 sB=FsrEasuSampleF(tc-AF2(con1.x, 0));
+    AF1 lA;
+    {
+        AF3 sA=FsrEasuSampleF(tc-AF2(0, con1.y));
+        lA=sA.r*0.5+sA.g;
+    }
+    AF1 lB;
+    {
+        AF3 sB=FsrEasuSampleF(tc-AF2(con1.x, 0));
+        lB=sB.r*0.5+sB.g;
+    }
     AF3 sC=FsrEasuSampleF(tc);
-    AF3 sD=FsrEasuSampleF(tc+AF2(con1.x, 0));
-    AF3 sE=FsrEasuSampleF(tc+AF2(0, con1.y));
-    AF1 lA=sA.r*0.5+sA.g;
-    AF1 lB=sB.r*0.5+sB.g;
-    AF1 lC=sC.r*0.5+sC.g;
-    AF1 lD=sD.r*0.5+sD.g;
-    AF1 lE=sE.r*0.5+sE.g;
-    // Then takes magnitude from abs average of both sides of 'C'.
-    // Length converts gradient reversal to 0, smoothly to non-reversal at 1, shaped, then adding horz and vert terms.
-    AF1 dc=lD-lC;
-    AF1 cb=lC-lB;
-    AF1 lenX=max(abs(dc),abs(cb));
-    lenX=ARcpF1(lenX);
+    AF1 lD;
+    {
+        AF3 sD=FsrEasuSampleF(tc+AF2(con1.x, 0));
+        lD=sD.r*0.5+sD.g;
+    }
+    AF1 lE;
+    {
+        AF3 sE=FsrEasuSampleF(tc+AF2(0, con1.y));
+        lE=sE.r*0.5+sE.g;
+    }
     AF1 dirX=lD-lB;
-    lenX=ASatF1(abs(dirX)*lenX);
-    lenX*=lenX;
-    // Repeat for the y axis.
-    AF1 ec=lE-lC;
-    AF1 ca=lC-lA;
-    AF1 lenY=max(abs(ec),abs(ca));
-    lenY=ARcpF1(lenY);
     AF1 dirY=lE-lA;
-    lenY=ASatF1(abs(dirY)*lenY);
-    AF1 len = lenY * lenY + lenX;
     AF2 dir = AF2(dirX, dirY);
-    //------------------------------------------------------------------------------------------------------------------------------ 
     AF2 dir2=dir*dir;
     AF1 dirR=dir2.x+dir2.y;
     if (dirR<AF1_(1.0/64.0)) {
@@ -99,6 +94,22 @@ void FsrEasuL(
 #ifdef FILAMENT_SPLIT_EASU
     gl_FragDepth = 1.0;
 #else
+    AF1 lC=sC.r*0.5+sC.g;
+    // Then takes magnitude from abs average of both sides of 'C'.
+    // Length converts gradient reversal to 0, smoothly to non-reversal at 1, shaped, then adding horz and vert terms.
+    AF1 dc=lD-lC;
+    AF1 cb=lC-lB;
+    AF1 lenX=max(abs(dc),abs(cb));
+    lenX=ARcpF1(lenX);
+    lenX=ASatF1(abs(dirX)*lenX);
+    lenX*=lenX;
+    // Repeat for the y axis.
+    AF1 ec=lE-lC;
+    AF1 ca=lC-lA;
+    AF1 lenY=max(abs(ec),abs(ca));
+    lenY=ARcpF1(lenY);
+    lenY=ASatF1(abs(dirY)*lenY);
+    AF1 len = lenY * lenY + lenX;
     dirR=rsqrt(dirR);
     dir*=AF2_(dirR);
     len=len*AF1_(0.5);
@@ -116,20 +127,25 @@ void FsrEasuL(
     highp AF2 p2=p0+(con2.zw);
     highp AF2 p3=p0+(con3.xy);
     p0.y-=con1.w; p3.y+=con1.w;
+
+    AF2 pR=AF2_(0.0);
+    AF2 pG=AF2_(0.0);
+    AF2 pB=AF2_(0.0);
+    AF2 pW=AF2_(0.0);
+
     AF4 fgcbR=FsrEasuRF(p0);
     AF4 fgcbG=FsrEasuGF(p0);
     AF4 fgcbB=FsrEasuBF(p0);
     AF4 ijfeR=FsrEasuRF(p1);
     AF4 ijfeG=FsrEasuGF(p1);
     AF4 ijfeB=FsrEasuBF(p1);
+
+    // Work pairs of taps at a time, overlapping each incoming gather group.
+    FsrEasuTapF2(pR,pG,pB,pW,AF2( 1.0, 0.0)-ppp.xx,AF2(-1.0,-1.0)-ppp.yy,dir,len2,lob,clp,fgcbR.zw,fgcbG.zw,fgcbB.zw);
+
     AF4 klhgR=FsrEasuRF(p2);
     AF4 klhgG=FsrEasuGF(p2);
     AF4 klhgB=FsrEasuBF(p2);
-    AF4 nokjR=FsrEasuRF(p3);
-    AF4 nokjG=FsrEasuGF(p3);
-    AF4 nokjB=FsrEasuBF(p3);
-    //------------------------------------------------------------------------------------------------------------------------------
-    // This part is different for FP16, working pairs of taps at a time.
 
 #ifdef FILAMENT_FSR_DERINGING
     AF3 min4=min(AMin3F3(AF3(ijfeR.z,ijfeG.z,ijfeB.z),AF3(klhgR.w,klhgG.w,klhgB.w),AF3(ijfeR.y,ijfeG.y,ijfeB.y)),
@@ -138,13 +154,13 @@ void FsrEasuL(
     AF3(klhgR.x,klhgG.x,klhgB.x));
 #endif
 
-    AF2 pR=AF2_(0.0);
-    AF2 pG=AF2_(0.0);
-    AF2 pB=AF2_(0.0);
-    AF2 pW=AF2_(0.0);
-    FsrEasuTapF2(pR,pG,pB,pW,AF2( 1.0, 0.0)-ppp.xx,AF2(-1.0,-1.0)-ppp.yy,dir,len2,lob,clp,fgcbR.zw,fgcbG.zw,fgcbB.zw);
     FsrEasuTapF2(pR,pG,pB,pW,AF2(-1.0, 0.0)-ppp.xx,AF2( 1.0, 1.0)-ppp.yy,dir,len2,lob,clp,ijfeR.xy,ijfeG.xy,ijfeB.xy);
     FsrEasuTapF2(pR,pG,pB,pW,AF2( 0.0,-1.0)-ppp.xx,AF2( 0.0, 0.0)-ppp.yy,dir,len2,lob,clp,ijfeR.zw,ijfeG.zw,ijfeB.zw);
+
+    AF4 nokjR=FsrEasuRF(p3);
+    AF4 nokjG=FsrEasuGF(p3);
+    AF4 nokjB=FsrEasuBF(p3);
+
     FsrEasuTapF2(pR,pG,pB,pW,AF2( 1.0, 2.0)-ppp.xx,AF2( 1.0, 1.0)-ppp.yy,dir,len2,lob,clp,klhgR.xy,klhgG.xy,klhgB.xy);
     FsrEasuTapF2(pR,pG,pB,pW,AF2( 2.0, 1.0)-ppp.xx,AF2( 0.0, 0.0)-ppp.yy,dir,len2,lob,clp,klhgR.zw,klhgG.zw,klhgB.zw);
     FsrEasuTapF2(pR,pG,pB,pW,AF2( 0.0, 1.0)-ppp.xx,AF2( 2.0, 2.0)-ppp.yy,dir,len2,lob,clp,nokjR.xy,nokjG.xy,nokjB.xy);
