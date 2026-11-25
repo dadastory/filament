@@ -1,0 +1,113 @@
+{
+  "filament_version": "v1.75.0",
+  "gpu": "Mali-G925-Immortalis MC12",
+  "soc": "MT6991",
+  "original_selected_trial_score_pct": 9.20299334567365,
+  "original_selected_trial_scenes": {
+    "DamagedHelmet": {
+      "pairs": [
+        {
+          "stock": {
+            "p50_ms": 2.840269,
+            "p95_ms": 6.154846
+          },
+          "candidate": {
+            "p50_ms": 1.834192,
+            "p95_ms": 3.083769
+          },
+          "improvement_pct": 35.42189137718998
+        },
+        {
+          "stock": {
+            "p50_ms": 1.9297305,
+            "p95_ms": 3.053538
+          },
+          "candidate": {
+            "p50_ms": 1.818807,
+            "p95_ms": 2.959077
+          },
+          "improvement_pct": 5.7481342601985075
+        },
+        {
+          "stock": {
+            "p50_ms": 3.7074995,
+            "p95_ms": 4.205231
+          },
+          "candidate": {
+            "p50_ms": 3.9286925,
+            "p95_ms": 5.549308
+          },
+          "improvement_pct": -5.966096556452671
+        },
+        {
+          "stock": {
+            "p50_ms": 5.397423,
+            "p95_ms": 6.713231
+          },
+          "candidate": {
+            "p50_ms": 3.6413845,
+            "p95_ms": 4.874462
+          },
+          "improvement_pct": 32.534757790893906
+        }
+      ],
+      "improvement_pct": 19.141446025546205,
+      "frames_passed": 12
+    },
+    "Fox": {
+      "pairs": [
+        {
+          "stock": {
+            "p50_ms": 3.9812305,
+            "p95_ms": 5.054385
+          },
+          "candidate": {
+            "p50_ms": 3.9881919999999997,
+            "p95_ms": 4.892
+          },
+          "improvement_pct": -0.17485799930447685
+        },
+        {
+          "stock": {
+            "p50_ms": 3.988807,
+            "p95_ms": 4.254769
+          },
+          "candidate": {
+            "p50_ms": 3.9723075,
+            "p95_ms": 4.789615
+          },
+          "improvement_pct": 0.4136449820710832
+        },
+        {
+          "stock": {
+            "p50_ms": 3.985423,
+            "p95_ms": 4.816308
+          },
+          "candidate": {
+            "p50_ms": 4.0370764999999995,
+            "p95_ms": 4.859692
+          },
+          "improvement_pct": -1.2960606690933327
+        },
+        {
+          "stock": {
+            "p50_ms": 3.9944615,
+            "p95_ms": 5.058385
+          },
+          "candidate": {
+            "p50_ms": 4.10473,
+            "p95_ms": 5.286462
+          },
+          "improvement_pct": -2.760534805505075
+        }
+      ],
+      "improvement_pct": -0.7354593341989047,
+      "frames_passed": 12
+    }
+  },
+  "original_image_diff_metrics": {
+    "improvement_pct": 9.20299334567365,
+    "frames_passed": 24.0,
+    "worst_frame_failing_pixels": 0.0
+  }
+}
