@@ -1,0 +1,207 @@
+{
+  "method": "NVIDIA LDR-FLIP 1.7",
+  "reference": "native 1920x1080",
+  "pixels_per_degree": 67,
+  "allowed_error_increase": 0.1,
+  "mean_improvement": 0.000421069035583333,
+  "status": "improved",
+  "passed": true,
+  "scenes": {
+    "DamagedHelmet": {
+      "stock_mean_error": 0.008182920943333333,
+      "candidate_mean_error": 0.007537419246666667,
+      "improvement": 0.0006455016966666659,
+      "stock_worst_frame": "frame-090",
+      "candidate_worst_frame": "frame-090",
+      "stock_worst_frame_error": 0.00925466884,
+      "candidate_worst_frame_error": 0.00845485739,
+      "error_increase": -0.0006455016966666659,
+      "flat_frames": [],
+      "passed": true,
+      "frames": [
+        {
+          "frame": "frame-000",
+          "stock_mean_error": 0.00875936076,
+          "candidate_mean_error": 0.00819455925,
+          "candidate_flat_color": false,
+          "improvement": 0.000564801509999999
+        },
+        {
+          "frame": "frame-010",
+          "stock_mean_error": 0.00907417666,
+          "candidate_mean_error": 0.00825961772,
+          "candidate_flat_color": false,
+          "improvement": 0.0008145589400000014
+        },
+        {
+          "frame": "frame-020",
+          "stock_mean_error": 0.00915725343,
+          "candidate_mean_error": 0.00831410009,
+          "candidate_flat_color": false,
+          "improvement": 0.0008431533399999996
+        },
+        {
+          "frame": "frame-030",
+          "stock_mean_error": 0.00836060755,
+          "candidate_mean_error": 0.00763070397,
+          "candidate_flat_color": false,
+          "improvement": 0.000729903579999999
+        },
+        {
+          "frame": "frame-040",
+          "stock_mean_error": 0.00718792342,
+          "candidate_mean_error": 0.00665333029,
+          "candidate_flat_color": false,
+          "improvement": 0.0005345931299999994
+        },
+        {
+          "frame": "frame-050",
+          "stock_mean_error": 0.00651532412,
+          "candidate_mean_error": 0.00613860367,
+          "candidate_flat_color": false,
+          "improvement": 0.0003767204499999996
+        },
+        {
+          "frame": "frame-060",
+          "stock_mean_error": 0.00647529401,
+          "candidate_mean_error": 0.00601864373,
+          "candidate_flat_color": false,
+          "improvement": 0.00045665028000000003
+        },
+        {
+          "frame": "frame-070",
+          "stock_mean_error": 0.00731399702,
+          "candidate_mean_error": 0.00672868732,
+          "candidate_flat_color": false,
+          "improvement": 0.0005853096999999998
+        },
+        {
+          "frame": "frame-080",
+          "stock_mean_error": 0.00880904309,
+          "candidate_mean_error": 0.00802763179,
+          "candidate_flat_color": false,
+          "improvement": 0.0007814112999999998
+        },
+        {
+          "frame": "frame-090",
+          "stock_mean_error": 0.00925466884,
+          "candidate_mean_error": 0.00845485739,
+          "candidate_flat_color": false,
+          "improvement": 0.00079981145
+        },
+        {
+          "frame": "frame-100",
+          "stock_mean_error": 0.00911259279,
+          "candidate_mean_error": 0.00835532043,
+          "candidate_flat_color": false,
+          "improvement": 0.0007572723600000001
+        },
+        {
+          "frame": "frame-110",
+          "stock_mean_error": 0.00817480963,
+          "candidate_mean_error": 0.00767297531,
+          "candidate_flat_color": false,
+          "improvement": 0.0005018343200000001
+        }
+      ]
+    },
+    "Fox": {
+      "stock_mean_error": 0.0012673712825,
+      "candidate_mean_error": 0.001070734908,
+      "improvement": 0.00019663637450000005,
+      "stock_worst_frame": "frame-060",
+      "candidate_worst_frame": "frame-000",
+      "stock_worst_frame_error": 0.00130340876,
+      "candidate_worst_frame_error": 0.00111524423,
+      "error_increase": -0.00018816453000000005,
+      "flat_frames": [],
+      "passed": true,
+      "frames": [
+        {
+          "frame": "frame-000",
+          "stock_mean_error": 0.00129693584,
+          "candidate_mean_error": 0.00111524423,
+          "candidate_flat_color": false,
+          "improvement": 0.00018169161000000005
+        },
+        {
+          "frame": "frame-010",
+          "stock_mean_error": 0.0012616422,
+          "candidate_mean_error": 0.00107717677,
+          "candidate_flat_color": false,
+          "improvement": 0.00018446543
+        },
+        {
+          "frame": "frame-020",
+          "stock_mean_error": 0.00125504914,
+          "candidate_mean_error": 0.00105290324,
+          "candidate_flat_color": false,
+          "improvement": 0.00020214590000000002
+        },
+        {
+          "frame": "frame-030",
+          "stock_mean_error": 0.00128702738,
+          "candidate_mean_error": 0.00107187836,
+          "candidate_flat_color": false,
+          "improvement": 0.00021514902000000012
+        },
+        {
+          "frame": "frame-040",
+          "stock_mean_error": 0.00129079551,
+          "candidate_mean_error": 0.00107592507,
+          "candidate_flat_color": false,
+          "improvement": 0.00021487044
+        },
+        {
+          "frame": "frame-050",
+          "stock_mean_error": 0.00129498728,
+          "candidate_mean_error": 0.0010988859,
+          "candidate_flat_color": false,
+          "improvement": 0.00019610137999999996
+        },
+        {
+          "frame": "frame-060",
+          "stock_mean_error": 0.00130340876,
+          "candidate_mean_error": 0.0010905778,
+          "candidate_flat_color": false,
+          "improvement": 0.00021283096000000007
+        },
+        {
+          "frame": "frame-070",
+          "stock_mean_error": 0.00128129916,
+          "candidate_mean_error": 0.00107694953,
+          "candidate_flat_color": false,
+          "improvement": 0.00020434963000000002
+        },
+        {
+          "frame": "frame-080",
+          "stock_mean_error": 0.00125479896,
+          "candidate_mean_error": 0.00107590272,
+          "candidate_flat_color": false,
+          "improvement": 0.0001788962399999999
+        },
+        {
+          "frame": "frame-090",
+          "stock_mean_error": 0.00124430936,
+          "candidate_mean_error": 0.00105140579,
+          "candidate_flat_color": false,
+          "improvement": 0.00019290357000000002
+        },
+        {
+          "frame": "frame-100",
+          "stock_mean_error": 0.00118351285,
+          "candidate_mean_error": 0.000990224886,
+          "candidate_flat_color": false,
+          "improvement": 0.00019328796399999994
+        },
+        {
+          "frame": "frame-110",
+          "stock_mean_error": 0.00125468895,
+          "candidate_mean_error": 0.0010717446,
+          "candidate_flat_color": false,
+          "improvement": 0.0001829443500000001
+        }
+      ]
+    }
+  }
+}

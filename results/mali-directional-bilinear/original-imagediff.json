@@ -1,0 +1,829 @@
+{
+  "passed": false,
+  "scenes": {
+    "DamagedHelmet": {
+      "pairs": [
+        {
+          "stock": {
+            "p50_ms": 5.7983075,
+            "p95_ms": 6.174077
+          },
+          "candidate": {
+            "p50_ms": 5.5513845,
+            "p95_ms": 6.246692
+          },
+          "improvement_pct": 4.2585357882451005
+        },
+        {
+          "stock": {
+            "p50_ms": 5.8531925000000005,
+            "p95_ms": 6.351385
+          },
+          "candidate": {
+            "p50_ms": 5.696,
+            "p95_ms": 6.016231
+          },
+          "improvement_pct": 2.6855856867854717
+        },
+        {
+          "stock": {
+            "p50_ms": 5.844308,
+            "p95_ms": 6.193308
+          },
+          "candidate": {
+            "p50_ms": 3.540115,
+            "p95_ms": 4.213154
+          },
+          "improvement_pct": 39.42627595944635
+        },
+        {
+          "stock": {
+            "p50_ms": 4.856231,
+            "p95_ms": 6.585462
+          },
+          "candidate": {
+            "p50_ms": 3.7644225000000002,
+            "p95_ms": 5.017462
+          },
+          "improvement_pct": 22.482631077475514
+        }
+      ],
+      "improvement_pct": 13.370583432860307,
+      "frames": [
+        {
+          "frame": "frame-000",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 204313,
+          "maxDiffFound": [
+            0.415686,
+            0.376471,
+            0.352941,
+            0.0
+          ],
+          "averageError": [
+            0.014793,
+            0.01492,
+            0.013972,
+            0.0
+          ],
+          "errorHistogram": [
+            202232,
+            2006,
+            72,
+            2,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-010",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 223648,
+          "maxDiffFound": [
+            0.345098,
+            0.329412,
+            0.321569,
+            0.0
+          ],
+          "averageError": [
+            0.014835,
+            0.014826,
+            0.014114,
+            0.0
+          ],
+          "errorHistogram": [
+            221694,
+            1922,
+            30,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-020",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 228647,
+          "maxDiffFound": [
+            0.27451,
+            0.282353,
+            0.270588,
+            0.0
+          ],
+          "averageError": [
+            0.014209,
+            0.01411,
+            0.013687,
+            0.0
+          ],
+          "errorHistogram": [
+            227161,
+            1461,
+            25,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-030",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 211926,
+          "maxDiffFound": [
+            0.419608,
+            0.411765,
+            0.388235,
+            0.0
+          ],
+          "averageError": [
+            0.012484,
+            0.012382,
+            0.012176,
+            0.0
+          ],
+          "errorHistogram": [
+            211008,
+            899,
+            18,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-040",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 182359,
+          "maxDiffFound": [
+            0.34902,
+            0.34902,
+            0.352941,
+            0.0
+          ],
+          "averageError": [
+            0.012509,
+            0.012429,
+            0.012381,
+            0.0
+          ],
+          "errorHistogram": [
+            181434,
+            904,
+            19,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-050",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 171637,
+          "maxDiffFound": [
+            0.380392,
+            0.34902,
+            0.341176,
+            0.0
+          ],
+          "averageError": [
+            0.012488,
+            0.012245,
+            0.01203,
+            0.0
+          ],
+          "errorHistogram": [
+            170525,
+            1081,
+            29,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-060",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 173376,
+          "maxDiffFound": [
+            0.486275,
+            0.470588,
+            0.439216,
+            0.0
+          ],
+          "averageError": [
+            0.012188,
+            0.012016,
+            0.011892,
+            0.0
+          ],
+          "errorHistogram": [
+            172446,
+            915,
+            13,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-070",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 193446,
+          "maxDiffFound": [
+            0.333333,
+            0.34902,
+            0.333333,
+            0.0
+          ],
+          "averageError": [
+            0.011873,
+            0.011815,
+            0.011681,
+            0.0
+          ],
+          "errorHistogram": [
+            192587,
+            828,
+            28,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-080",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 220013,
+          "maxDiffFound": [
+            0.301961,
+            0.290196,
+            0.286275,
+            0.0
+          ],
+          "averageError": [
+            0.013163,
+            0.013007,
+            0.012712,
+            0.0
+          ],
+          "errorHistogram": [
+            218741,
+            1239,
+            32,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-090",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 227921,
+          "maxDiffFound": [
+            0.305882,
+            0.313725,
+            0.317647,
+            0.0
+          ],
+          "averageError": [
+            0.014287,
+            0.01427,
+            0.013756,
+            0.0
+          ],
+          "errorHistogram": [
+            226340,
+            1544,
+            36,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-100",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 217273,
+          "maxDiffFound": [
+            0.341176,
+            0.352941,
+            0.380392,
+            0.0
+          ],
+          "averageError": [
+            0.01478,
+            0.014756,
+            0.013863,
+            0.0
+          ],
+          "errorHistogram": [
+            215376,
+            1842,
+            52,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-110",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 194349,
+          "maxDiffFound": [
+            0.345098,
+            0.333333,
+            0.32549,
+            0.0
+          ],
+          "averageError": [
+            0.014626,
+            0.014618,
+            0.013626,
+            0.0
+          ],
+          "errorHistogram": [
+            192568,
+            1727,
+            47,
+            7,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "frames_passed": 0
+    },
+    "Fox": {
+      "pairs": [
+        {
+          "stock": {
+            "p50_ms": 3.9669225,
+            "p95_ms": 5.169231
+          },
+          "candidate": {
+            "p50_ms": 3.8688845,
+            "p95_ms": 4.802462
+          },
+          "improvement_pct": 2.4713868244211943
+        },
+        {
+          "stock": {
+            "p50_ms": 3.9413845,
+            "p95_ms": 4.196308
+          },
+          "candidate": {
+            "p50_ms": 3.8528845,
+            "p95_ms": 4.12
+          },
+          "improvement_pct": 2.245403867600327
+        },
+        {
+          "stock": {
+            "p50_ms": 3.9743075,
+            "p95_ms": 5.022154
+          },
+          "candidate": {
+            "p50_ms": 3.9318075,
+            "p95_ms": 4.822462
+          },
+          "improvement_pct": 1.0693686887589846
+        },
+        {
+          "stock": {
+            "p50_ms": 3.978192,
+            "p95_ms": 5.133769
+          },
+          "candidate": {
+            "p50_ms": 3.895846,
+            "p95_ms": 4.317846
+          },
+          "improvement_pct": 2.069935287185732
+        }
+      ],
+      "improvement_pct": 2.1576695773930297,
+      "frames": [
+        {
+          "frame": "frame-000",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 25172,
+          "maxDiffFound": [
+            0.215686,
+            0.192157,
+            0.196078,
+            0.0
+          ],
+          "averageError": [
+            0.015804,
+            0.012141,
+            0.011174,
+            0.0
+          ],
+          "errorHistogram": [
+            24911,
+            260,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-010",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 24748,
+          "maxDiffFound": [
+            0.211765,
+            0.2,
+            0.215686,
+            0.0
+          ],
+          "averageError": [
+            0.016267,
+            0.012645,
+            0.011699,
+            0.0
+          ],
+          "errorHistogram": [
+            24440,
+            302,
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-020",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 23875,
+          "maxDiffFound": [
+            0.203922,
+            0.188235,
+            0.278431,
+            0.0
+          ],
+          "averageError": [
+            0.016632,
+            0.012855,
+            0.01201,
+            0.0
+          ],
+          "errorHistogram": [
+            23593,
+            279,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-030",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 24507,
+          "maxDiffFound": [
+            0.203922,
+            0.188235,
+            0.254902,
+            0.0
+          ],
+          "averageError": [
+            0.016175,
+            0.012576,
+            0.011625,
+            0.0
+          ],
+          "errorHistogram": [
+            24230,
+            273,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-040",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 24779,
+          "maxDiffFound": [
+            0.192157,
+            0.160784,
+            0.227451,
+            0.0
+          ],
+          "averageError": [
+            0.01601,
+            0.012714,
+            0.011752,
+            0.0
+          ],
+          "errorHistogram": [
+            24416,
+            362,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-050",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 25468,
+          "maxDiffFound": [
+            0.192157,
+            0.14902,
+            0.196078,
+            0.0
+          ],
+          "averageError": [
+            0.016141,
+            0.012522,
+            0.011557,
+            0.0
+          ],
+          "errorHistogram": [
+            25115,
+            353,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-060",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 25285,
+          "maxDiffFound": [
+            0.227451,
+            0.215686,
+            0.219608,
+            0.0
+          ],
+          "averageError": [
+            0.016659,
+            0.012937,
+            0.01193,
+            0.0
+          ],
+          "errorHistogram": [
+            24905,
+            375,
+            5,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-070",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 24785,
+          "maxDiffFound": [
+            0.176471,
+            0.145098,
+            0.211765,
+            0.0
+          ],
+          "averageError": [
+            0.016535,
+            0.012498,
+            0.011486,
+            0.0
+          ],
+          "errorHistogram": [
+            24426,
+            358,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-080",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 25533,
+          "maxDiffFound": [
+            0.192157,
+            0.14902,
+            0.219608,
+            0.0
+          ],
+          "averageError": [
+            0.01538,
+            0.012192,
+            0.011212,
+            0.0
+          ],
+          "errorHistogram": [
+            25259,
+            273,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-090",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 24990,
+          "maxDiffFound": [
+            0.180392,
+            0.168627,
+            0.223529,
+            0.0
+          ],
+          "averageError": [
+            0.01579,
+            0.012474,
+            0.011564,
+            0.0
+          ],
+          "errorHistogram": [
+            24667,
+            321,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-100",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 22677,
+          "maxDiffFound": [
+            0.211765,
+            0.164706,
+            0.239216,
+            0.0
+          ],
+          "averageError": [
+            0.016523,
+            0.013155,
+            0.012573,
+            0.0
+          ],
+          "errorHistogram": [
+            22329,
+            341,
+            7,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "frame": "frame-110",
+          "status": 2,
+          "passed": false,
+          "failingPixelCount": 24595,
+          "maxDiffFound": [
+            0.219608,
+            0.152941,
+            0.172549,
+            0.0
+          ],
+          "averageError": [
+            0.016422,
+            0.012698,
+            0.011679,
+            0.0
+          ],
+          "errorHistogram": [
+            24258,
+            333,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "frames_passed": 0
+    }
+  }
+}
